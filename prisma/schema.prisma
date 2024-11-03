@@ -1,0 +1,85 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+generator client {
+  provider = "prisma-client-js"
+}
+
+
+datasource db {
+  provider  = "mysql"
+  url       = env("DATABASE_URL") // uses connection pooling
+}
+
+
+model Root {
+  id        Int      @id @default(autoincrement())
+  name      String
+  equation  String
+  result    String
+  xl        String
+  xr        String
+  xn        String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model diff {
+  id        Int      @id @default(autoincrement())
+  equation  String
+  result    String
+  x         String
+  h         String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model integral {
+  id        Int      @id @default(autoincrement())
+  name      String
+  equation  String
+  result    String
+  a         String
+  b         String
+  n         String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model linear {
+  id        Int      @id @default(autoincrement())
+  name      String
+  size      String
+  matrixA   Json
+  matrixB   Json
+  result    String
+  x         String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model exponential {
+  id        Int      @id @default(autoincrement())
+  name      String
+  size      String
+  result    String
+  x         Json
+  y         Json
+  m         String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model interpolation {
+  id        Int      @id @default(autoincrement())
+  name      String
+  size      String
+  result    String
+  x         Json
+  y         Json
+  m         String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

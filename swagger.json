@@ -1,0 +1,69 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Numerical API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/root": {
+      "get": {
+        "tags": [
+          "INFO"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/diff": {
+      "get": {
+        "tags": [
+          "INFO"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/integral": {
+      "get": {
+        "tags": [
+          "INFO"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/expo": {
+      "get": {
+        "tags": [
+          "INFO"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/api/inter": {
+      "get": {
+        "tags": [
+          "INFO"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    }
+  }
+}
